@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
         binding.btnTune.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getFragment(TuneFragment.newInstance());
+                onFragment(TuneFragment.newInstance());
             }
         });
     }
@@ -180,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void getFragment(Fragment fragment) {
+    private void onFragment(Fragment fragment) {
         try {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragmentcontainer, fragment).commit();
         } catch (Exception e) {
